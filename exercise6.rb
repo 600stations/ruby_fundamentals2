@@ -1,5 +1,6 @@
 grocery_list = ["spinach", "bananas", "apples", "lettuce"]
-grocery_list.push("onions", "coriander")#adds items to list
+grocery_list.push("onions", "coriander")#non-method way to add items to list
+
 grocery_list.each do |x|
   puts "* #{x}"#puts asterisk before item on iterated list
   end
@@ -9,17 +10,20 @@ if grocery_list.include?("bananas")# checks if bananas on list
 else
   puts "Pick up some bananas!"
 end
-#--------add method that adds items to list
-def add_to_list(x)
-
-  #if grocery_list(x)
-  #puts "#{item} is on your list"
-  #else
-  #grocery_list.push(item)
-  #end
-#add_to_list(rice) checks for then adds item to grocery_list  
+#--------method below checks list and adds tadds items to list
+def add_to_list(item, grocery_list)#add item and grocery_list to method
+  if grocery_list.include?(item)#check if item is on list
+    puts "#{item} is already on your list"#if item on list
+  else
+    grocery_list.push(item)#push new items to grocery list
+  end
+end
+#
+#
 puts grocery_list[1] # displays the second item on my list
 puts grocery_list.sort # sorts my list
 grocery_list.delete_at(0)#deletes spinach from my list
 puts grocery_list
-#add to shopping list method-add rice----------------------!!!
+
+puts add_to_list("rice", grocery_list)#check and add new items to grocery list
+puts add_to_list("rice", grocery_list)# this proves that item is already on my list
