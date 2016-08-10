@@ -22,11 +22,3 @@ display_student(students) #calls my method with my hash as parameter
 students.delete(:cohort2)# delete second key value pair in hash-note: no quotes for key
 puts students
 puts
-
-# workers = {
-#   :group1 => 5,
-#   :group2 => 4,
-#   :group3 => 2
-# }
-# sum = 0
-# workers.each { |key, value| puts sum +=value.last }
